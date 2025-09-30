@@ -28,26 +28,31 @@ public class Polls {
 
                     switch (option) {
                         case 1:
-                            Partido_1.setShare(p1++);
+                            p1++;
+                            Partido_1.setShare(p1);
                             System.out.println("Has votado a " + Partido_1.getName());
                             break;
                         case 2:
-                            Partido_2.setShare(p2++);
+                            p2++;
+                            Partido_2.setShare(p2);
                             System.out.println("Has votado a " + Partido_2.getName());
 
                             break;
                         case 3:
-                            Partido_3.setShare(p3++);
+                            p3++;
+                            Partido_3.setShare(p3);
                             System.out.println("Has votado a " + Partido_3.getName());
 
                             break;
                         case 4:
-                            Partido_4.setShare(p4++);
+                            p4++;
+                            Partido_4.setShare(p4);
                             System.out.println("Has votado a " + Partido_4.getName());
 
                             break;
                         case 5:
-                            Partido_2.setShare(p5++);
+                            p5++;
+                            Partido_2.setShare(p5);
                             System.out.println("Has votado a " + Partido_5.getName());
 
                             break;
@@ -57,16 +62,16 @@ public class Polls {
                     }
                 }
             }
-            System.out.println("¿Actualizar resultados? s/n");
+            System.out.println("\n¿Actualizar resultados? s/n");
             String update = scanner.nextLine();
             if (update.equals("s")) {
-                System.out.println("\n Así van los resultados:");
+                System.out.println("\nAsí van los resultados:");
                 System.out.println("De " + (p1 + p2 + p3 + p4 + p5) + " votos contados: ");
-                System.out.println("Partido 1 tiene el " + ((p1 * 100) / (p1 + p2 + p3 + p4 + p5)) + "% de los votos");
-                System.out.println("Partido 2 tiene el " + (p2 * 100) / (p1 + p2 + p3 + p4 + p5) + "% de los votos");
-                System.out.println("Partido 3 tiene el " + (p3 * 100) / (p1 + p2 + p3 + p4 + p5) + "% de los votos");
-                System.out.println("Partido 4 tiene el " + (p4 * 100) / (p1 + p2 + p3 + p4 + p5) + "% de los votos");
-                System.out.println("Partido 5 tiene el " + (p5 * 100) / (p1 + p2 + p3 + p4 + p5) + "% de los votos");
+                System.out.println("Partido 1 tiene el " + ((Partido_1.getShare() * 100) / (p1 + p2 + p3 + p4 + p5)) + "% de los votos");
+                System.out.println("Partido 2 tiene el " + (Partido_2.getShare() * 100) / (p1 + p2 + p3 + p4 + p5) + "% de los votos");
+                System.out.println("Partido 3 tiene el " + (Partido_3.getShare() * 100) / (p1 + p2 + p3 + p4 + p5) + "% de los votos");
+                System.out.println("Partido 4 tiene el " + (Partido_4.getShare() * 100) / (p1 + p2 + p3 + p4 + p5) + "% de los votos");
+                System.out.println("Partido 5 tiene el " + (Partido_5.getShare() * 100) / (p1 + p2 + p3 + p4 + p5) + "% de los votos");
 
 
             } else {
