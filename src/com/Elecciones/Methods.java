@@ -17,6 +17,7 @@ public class Methods {
     public static void pressEnter(Scanner scanner){
         System.out.println("\nPresiona ENTER para continuar ...");
         scanner.hasNextLine();
+        scanner.close();
 
     }
 

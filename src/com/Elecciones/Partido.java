@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Partido {
     private String name;
-    private int share;
+    private double share=0;
 
     public Partido(String name) {
         this.name = name;
@@ -23,7 +23,7 @@ public class Partido {
         return share;
     }
 
-    public void setShare(int share) {
+    public void setShare(double share) {
 
         this.share = share;
     }
